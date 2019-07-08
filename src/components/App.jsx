@@ -10,16 +10,19 @@ import Portfolio from "../components/Portfolio";
 import Education from "../components/Education";
 import HomePage from "./HomePage";
 import Contact from "./Contact";
+import baseTheme from "../scss/baseTheme";
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+
 
 class App extends React.Component{
 
   render() {
     return (
+        <MuiThemeProvider theme={baseTheme}>
         <div className="App">
             <Router>
             <Header/>
-            <div>
-                <switch>
+                <Switch>
                 <Route path={"/"} component={HomePage} exact />
                 <Route path={"/AboutMe"} component={AboutMe}  />
                 <Route path={"/Summary"} component={Summary}  />
@@ -27,11 +30,11 @@ class App extends React.Component{
                 <Route path={"/Education"} component={Education}  />
                 <Route path={"/Portfolio"} component={Portfolio}  />
                 <Route path={"/Contact"} component={Contact}  />
-                </switch>
-            </div>
+                </Switch>
             </Router>
 
         </div>
+        </MuiThemeProvider>
     );
 
   }

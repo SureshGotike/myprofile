@@ -1,37 +1,98 @@
 import React from 'react';
-
+import baseStyles from '../scss/baseStyles';
+import withStyles from "@material-ui/core/styles/withStyles";
+import '../scss/App.scss';
+import {Grid} from "@material-ui/core";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
 
 class Summary extends React.Component{
 
     render() {
 
+            const {classes} =  this.props;
         return(
             <div>
-                •	Over 9 years of industry experience in software development on J2EE technologies, SQL & No SQL databases, Cloud technologies, Cloud Native Development, UI development and DevOps.
-                •	Sound knowledge of Spring Boot, Micro Services, Spring Cloud, Restful Web Services , spring framework and TDD.
-                •	Experience in Pivotal Cloud Foundry.
-                •	Experience in Docker, Kubernetes and PKS(Pivotal Container Services).
-                •	Experience on UI technologies like NodeJS, React JS, Redux, React Router, Material UI, Express JS, HTML5, Java Script and SCSS.
-                •	Experience with Mongo DB.
-                •	Experience with Circuit Breaker Integration.
-                •	Experience with Data Structures and Algorithms.
-                •	Experience with Multi-Threading.
-                •	Experience on ORM tools like Hibernate, Eclipse link, JPA, Criteria Builder and HQL.
-                •	Experience with different spring modules like Spring Core, Spring MVC, Spring AOP, Spring JDBC etc.
-                •	Experience in using Standard Design Patterns.
-                •	Developed REST web services based on REST architecture, Spring-REST and JAX-RS.
-                •	Experience in writing DDL, DML, SQL queries, PL/SQL Stored Procedures, Functions. Proficient in using RDBMS concepts with Oracle and MySQL.
-                •	Experience in Unit testing with TDD approach using Junit, Spock.
-                •	Experience in source control tools like GIT, SVN and ClearCase.
-                •	Experience with Image Repository tools like Docker Hub.
-                •	Experience with Dependency management and build tools like Maven and Gradle.
-                •	Static analysis using Sonar lint and SonarQube.
-                •	Proficient in using IDE’s such as IntelliJ IDEA, Eclipse, STS, WebStorm and sublime.
-                •	Worked on different Application and Web Servers like Apache Tomcat, JBoss and Jetty.
-                •	Experience with Data exchange formats like JSON and XML.
-                •	Experience in various methodologies like Agile and Waterfall. Worked on Agile Methodology with daily scrum meetings, Story grooming, Story estimations, Sprint retrospectives and Sprint planning.
-                •	Experience with Operating systems such as Windows, Mac and Linux.
-                •	Experience in Leading a project and team working from different Geographic locations for the successful delivery of the project.
+               <Grid id={"top-container"} container={true} justify={"center"}>
+
+                 <Grid id={"row1"} container={true} justify={"center"} style={{marginTop:5}}>
+
+                         <Grid id={"item1"} item={true} sm style={{margin:10}}>
+                                 <Paper>
+                                         <div className={classes.headingColorFill}>
+                                         Professional Summary
+                                         </div>
+                                         <div>
+                                            9 Years of Professional Experience
+                                            <br/>
+                                            Full Stack Lead Developer and Architect
+                                            <br/>
+                                            Can Design, Develop and Deploy to Clouds
+                                            <br/>
+                                            Participation in Technical Presentations
+                                            <br/>
+                                            Excellent Client Satisfaction
+                                         </div>
+
+
+                                 </Paper>
+                         </Grid>
+
+                 </Grid>
+
+                 <Grid id={"row2"} container={true} justify={"center"} style={{marginTop:5}}>
+
+                         <Grid id={"item1"} item={true} sm style={{margin:10}}>
+                                 <Paper>
+                         <div className={classes.headingColorFill}>
+                                 <Typography className={classes.heading1}>
+                                         Abilities
+                                 </Typography>
+
+                         </div>
+                                         <div>
+                                                 <Typography>
+                                                 If Opportunity Doesn't Knock,
+                                                 <br/>Build a Door
+                                                 <br/>
+                                                 <h6>    -- Milton Berle</h6>
+                                                 </Typography>
+                                         </div>
+                                         <div className={classes.headingColorFill}>
+                                                 <Typography className={classes.heading2}>
+                                                         Skills
+                                                 </Typography>
+                                         </div>
+                                         <div>
+                                                 Java, Spring Boot, Micro Services, React, Mondo DB, Pivotal Cloud Foundry
+                                         </div>
+
+                                         <div className={classes.headingColorFill}>
+                                                 <Typography className={classes.heading2}>
+                                                 Tools
+                                                 </Typography>
+                                         </div>
+                                         <Typography>
+                                                 Git, GitHub, IntelliJ, Windows, WebStorm, Docker, Docker Hub
+                                         </Typography>
+
+                                         <div className={classes.headingColorFill}>
+                                                 <Typography className={classes.heading2}>
+                                                 Languages
+                                                 </Typography>
+                                         </div>
+                                         <Typography>
+                                                 Telugu, English
+                                         </Typography>
+                                 </Paper>
+                         </Grid>
+
+
+                 </Grid>
+
+
+               </Grid>
+
 
             </div>
 
@@ -41,4 +102,4 @@ class Summary extends React.Component{
 
 }
 
-export default Summary;
+export default withStyles(baseStyles)(Summary);

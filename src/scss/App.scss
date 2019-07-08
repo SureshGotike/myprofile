@@ -1,6 +1,17 @@
 .App {
+  alignment: center;
   text-align: center;
 }
+body{
+  height: 100%;
+  background-color: #fff9c4;
+}
+
+.backgroundImage{
+  background-image: url("../assets/background_img.jpg");
+}
+
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

@@ -10,9 +10,15 @@ class Contact extends React.Component{
 
         return(
             <div>
-                Contact me here.
+
+                <Typography>
+                    Do you want some one to shoulder the responsibility of your Project?
+                    I am here!!!
+                </Typography>
                 <br/>
                 suresh.gotike@yahoo.com
+                <br/>
+                https://www.linkedin.com/in/sureshgotike/
             </div>
 
 
